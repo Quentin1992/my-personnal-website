@@ -13,9 +13,9 @@ Le site est divisé en plusieurs sections :
 
 ## Technologies utilisées
 
-Le site utilisera certainement les technologies suivantes :
+Le site utilise les technologies suivantes :
 
-- **Vue.js** : Pour le contenu dynamique.
+- **Nuxt.js** : Pour le contenu statique.
 - **Markdown** : Pour la rédaction des articles de blog.
 - **GitHub Actions** : Pour l'intégration continue et le déploiement automatique sur GitHub Pages ou Netlify.
 
@@ -28,21 +28,25 @@ git clone https://github.com/Quentin1992/my-personnal-website
 cd my-personnal-website
 ```
 
-Ensuite, installe les dépendances et lance le serveur de développement :
+Ensuite, installe les dépendances et lance le serveur de développement sur `http://localhost:3000` :
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Déploiement
+## Production
 
-Le site est déployé automatiquement via GitHub Actions à chaque push sur la branche main. Les détails du pipeline CI/CD se trouveront certainement dans le fichier .github/workflows/deploy.yml.
+Build the application for production:
 
-## Contributions
+```bash
+npm run build
+```
 
-Les suggestions et améliorations sont les bienvenues ! N'hésite pas à ouvrir une issue ou à soumettre une pull request.
+Locally preview production build:
 
-## Licence
+```bash
+npm run preview
+```
 
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
