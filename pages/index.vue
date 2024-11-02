@@ -1,28 +1,49 @@
 <template>
 	<div>
-		<!-- Header avec navigation fixe -->
+		<!-- Header -->
 		<header class="header">
 			<nav>
 				<ul>
-					<li><a href="#hero">Accueil</a></li>
-					<li><a href="#about">À propos</a></li>
-					<!-- <li><a href="#projects">Projets</a></li>
-					<li><a href="#blog">Blog</a></li> -->
-					<li><a href="#contact">Contact</a></li>
+					<li>
+						<a href="#hero" @click.prevent="scrollToSection('hero')"
+							>Accueil</a
+						>
+					</li>
+					<li>
+						<a
+							href="#about"
+							@click.prevent="scrollToSection('about')"
+							>À propos</a
+						>
+					</li>
+					<li>
+						<a
+							href="#contact"
+							@click.prevent="scrollToSection('contact')"
+							>Contact</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<!-- Section Héros -->
 		<section id="hero" class="hero">
-			<h1>Quentin Bogaert</h1>
-			<p>
-				Découvrez mes compétences pour créer des solutions web
-				optimisées et accessibles.
-			</p>
-			<!-- <button @click="scrollToSection('#projects')">
-				Découvrir mes projets
-			</button> -->
+			<img src="../static/images/portrait.png" />
+			<div>
+				<h1>Quentin Bogaert</h1>
+				<h2>Développeur Full-Stack | Spécialiste Front-End (Vue.js)</h2>
+				<p>
+					Découvrez mes compétences pour créer des solutions web
+					optimisées et accessibles.
+				</p>
+				<div class="hero__links">
+					<button @click="scrollToSection('about')">
+						A propos de moi
+					</button>
+					<button @click="scrollToSection('contact')">Contact</button>
+				</div>
+			</div>
 		</section>
 
 		<!-- Section À propos -->
@@ -83,54 +104,45 @@
 			</p>
 		</section>
 
-		<!-- Section Projets -->
-		<!-- <section id="projects" class="projects">
-			<h2>Mes projets</h2>
-			<div
-				v-for="(project, index) in projects"
-				:key="index"
-				class="project"
-			>
-				<h3>{{ project.title }}</h3>
-				<p>{{ project.description }}</p>
-			</div>
-		</section> -->
-
-		<!-- Section Blog -->
-		<!-- <section id="blog" class="blog">
-			<h2>Derniers articles de blog</h2>
-			<div
-				v-for="(post, index) in blogPosts"
-				:key="index"
-				class="blog-post"
-			>
-				<h3>{{ post.title }}</h3>
-				<p>{{ post.summary }}</p>
-			</div>
-		</section> -->
-
 		<!-- Section Contact -->
 		<section id="contact" class="contact">
 			<h2>Contact</h2>
 			<p>
-				Envie de me contacter ? Retrouvez-moi sur
+				Envie de me contacter ? Retrouvez-moi sur LinkedIn, WeLoveDevs,
+				ou GitHub :
+			</p>
+			<div class="contact__links">
 				<a href="https://www.linkedin.com/in/quentin-bogaert/">
-					LinkedIn </a
-				>,
+					<img src="../static/images/icons/linkedin-logo.png" />
+				</a>
 				<a
 					href="https://welovedevs.com/app/user/quentin-developpeur-web-frontend"
 				>
-					WeLoveDevs </a
-				>, ou <a href="https://github.com/Quentin1992"> GitHub </a>.
-			</p>
+					<img src="../static/images/icons/welovedevs-logo.svg"
+				/></a>
+				<a href="https://github.com/Quentin1992">
+					<img src="../static/images/icons/github-logo.png"
+				/></a>
+			</div>
 		</section>
 
 		<!-- Footer -->
 		<footer class="footer">
-			<p>&copy; 2024 TechBuilder</p>
+			<p>&copy; 2024 Quentin Bogaert</p>
 			<nav>
 				<a href="#hero">Mentions légales</a> |
-				<a href="#privacy">Politique de confidentialité</a>
+				<a href="#privacy">Politique de confidentialité</a> |
+				<a
+					href="https://www.flaticon.com/free-icons/linkedin"
+					title="linkedin icons"
+					>Linkedin icons created by Google - Flaticon</a
+				>
+				|
+				<a
+					href="https://www.flaticon.com/free-icons/cat"
+					title="cat icons"
+					>Cat icons created by Dave Gandy - Flaticon</a
+				>
 			</nav>
 		</footer>
 	</div>
@@ -138,35 +150,9 @@
 
 <script>
 export default {
-	data() {
-		return {
-			projects: [
-				{
-					title: "To-do list TypeScript",
-					description:
-						"Une application de to-do list construite en TypeScript.",
-				},
-				{
-					title: "Site vitrine personnel",
-					description:
-						"Mon site personnel pour présenter mes projets et articles.",
-				},
-			],
-			blogPosts: [
-				{
-					title: "Pourquoi j'ai décidé d'apprendre TypeScript",
-					summary: "Un article sur mes motivations...",
-				},
-				{
-					title: "Installer et configurer TypeScript",
-					summary: "Un guide pour débutants en TypeScript.",
-				},
-			],
-		};
-	},
 	methods: {
 		scrollToSection(id) {
-			document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+			document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 		},
 	},
 };
@@ -182,37 +168,77 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: #333;
+	background: #183736;
 	color: #fff;
-	nav ul {
-		display: flex;
-		list-style: none;
-		justify-content: space-around;
-		padding: 0;
-		li a {
-			color: #fff;
-			text-decoration: none;
-			padding: 1em;
+	nav {
+		ul {
+			display: flex;
+			list-style: none;
+			justify-content: space-around;
+			padding: 0;
+			li a {
+				color: #fff;
+				text-decoration: none;
+				padding: 1em;
+			}
 		}
 	}
 }
 .hero,
 .about,
-.projects,
-.blog,
 .contact {
 	padding: 4rem 2rem;
-	min-height: 100vh;
+}
+.about,
+.contact {
+	@media (min-width: 900px) {
+		width: 50%;
+		margin: auto;
+	}
 }
 .hero {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: #f4f4f4;
+	gap: 1em;
+	min-height: 100vh;
+	background-color: #f4f4f4;
+	h1 {
+		font-size: 1.8em;
+	}
+	p {
+		font-size: 1.3em;
+	}
+	img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		@media (min-width: 900px) {
+			width: 200px;
+			height: 200px;
+		}
+	}
+	&__links {
+		display: flex;
+		gap: 1em;
+	}
+}
+.contact {
+	&__links {
+		display: flex;
+		justify-content: space-around;
+		img {
+			width: 50px;
+			height: 50px;
+			@media (min-width: 900px) {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
 }
 .footer {
-	background: #333;
+	background: #183736;
 	color: #fff;
 	text-align: center;
 	padding: 1rem;
