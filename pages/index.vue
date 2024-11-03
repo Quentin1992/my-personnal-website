@@ -1,32 +1,5 @@
 <template>
-	<div>
-		<!-- Header -->
-		<header class="header">
-			<nav>
-				<ul>
-					<li>
-						<a href="#hero" @click.prevent="scrollToSection('hero')"
-							>Accueil</a
-						>
-					</li>
-					<li>
-						<a
-							href="#about"
-							@click.prevent="scrollToSection('about')"
-							>À propos</a
-						>
-					</li>
-					<li>
-						<a
-							href="#contact"
-							@click.prevent="scrollToSection('contact')"
-							>Contact</a
-						>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
+	<NuxtLayout>
 		<!-- Section Héros -->
 		<section id="hero" class="hero">
 			<img src="../static/images/portrait.png" />
@@ -125,27 +98,7 @@
 				/></a>
 			</div>
 		</section>
-
-		<!-- Footer -->
-		<footer class="footer">
-			<p>&copy; 2024 Quentin Bogaert</p>
-			<nav>
-				<a href="#hero">Mentions légales</a> |
-				<a href="#privacy">Politique de confidentialité</a> |
-				<a
-					href="https://www.flaticon.com/free-icons/linkedin"
-					title="linkedin icons"
-					>Linkedin icons created by Google - Flaticon</a
-				>
-				|
-				<a
-					href="https://www.flaticon.com/free-icons/cat"
-					title="cat icons"
-					>Cat icons created by Dave Gandy - Flaticon</a
-				>
-			</nav>
-		</footer>
-	</div>
+	</NuxtLayout>
 </template>
 
 <script>
@@ -160,30 +113,6 @@ export default {
 
 <style scoped lang="scss">
 /* Styles de base */
-body {
-	margin: 0;
-}
-
-.header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background: #183736;
-	color: #fff;
-	nav {
-		ul {
-			display: flex;
-			list-style: none;
-			justify-content: space-around;
-			padding: 0;
-			li a {
-				color: #fff;
-				text-decoration: none;
-				padding: 1em;
-			}
-		}
-	}
-}
 .hero,
 .about,
 .contact {
@@ -202,7 +131,7 @@ body {
 	justify-content: center;
 	gap: 1em;
 	min-height: 100vh;
-	background-color: #f4f4f4;
+	background-color: #a2a9af50;
 	h1 {
 		font-size: 1.8em;
 	}
@@ -236,11 +165,5 @@ body {
 			}
 		}
 	}
-}
-.footer {
-	background: #183736;
-	color: #fff;
-	text-align: center;
-	padding: 1rem;
 }
 </style>
