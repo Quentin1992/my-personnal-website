@@ -39,8 +39,8 @@ export default {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: #183736;
-	color: #fff;
+	background: var(--primaryColor);
+	color: var(--lightColor);
 	nav {
 		ul {
 			display: flex;
@@ -48,7 +48,7 @@ export default {
 			justify-content: space-around;
 			padding: 0;
 			li a {
-				color: #fff;
+				color: var(--lightColor);
 				text-decoration: none;
 				padding: 1em;
 			}

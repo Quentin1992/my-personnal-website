@@ -125,13 +125,16 @@ export default {
 		margin: auto;
 	}
 }
-.hero {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1em;
+.hero,
+.about {
 	min-height: 100vh;
-	background-color: #a2a9af50;
+	display: flex;
+	justify-content: center;
+}
+.hero {
+	align-items: center;
+	gap: 1em;
+	background-color: var(--lightColor);
 	h1 {
 		font-size: 1.8em;
 	}
@@ -153,6 +156,7 @@ export default {
 	}
 }
 .contact {
+	flex-direction: column;
 	&__links {
 		display: flex;
 		justify-content: space-around;

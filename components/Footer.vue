@@ -40,8 +40,8 @@
 
 <style scoped lang="scss">
 .footer {
-	background: #183736;
-	color: #fff;
+	background: var(--darkColor);
+	color: var(--lightColor);
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
@@ -53,9 +53,9 @@
 		font-size: 0.8rem;
 	}
 	a {
-		color: lightgrey;
+		color: var(--lightColor);
 		&:visited {
-			color: grey;
+			color: var(--primaryColor);
 		}
 	}
 	.legal-notice {
