@@ -43,8 +43,10 @@
 	background: var(--darkColor);
 	color: var(--lightColor);
 	padding: 1rem;
-	display: flex;
-	justify-content: space-between;
+	@media (min-width: 900px) {
+		display: flex;
+		justify-content: space-between;
+	}
 	h2 {
 		font-size: 1em;
 	}
@@ -58,10 +60,13 @@
 			color: var(--primaryColor);
 		}
 	}
-	.legal-notice {
-		display: flex;
-		gap: 1em;
+	@media (min-width: 900px) {
+		.legal-notice {
+			display: flex;
+			gap: 1em;
+		}
 	}
+
 	.credits {
 		display: flex;
 		flex-direction: column;

@@ -135,6 +135,10 @@ export default {
 	align-items: center;
 	gap: 1em;
 	background-color: var(--lightColor);
+	flex-direction: column;
+	@media (min-width: 900px) {
+		flex-direction: row;
+	}
 	h1 {
 		font-size: 1.8em;
 	}
