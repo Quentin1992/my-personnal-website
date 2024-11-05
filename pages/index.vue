@@ -128,10 +128,10 @@ export default {
 .hero,
 .about {
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
 }
 .hero {
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	gap: 1em;
 	background-color: var(--lightColor);

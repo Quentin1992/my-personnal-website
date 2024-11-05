@@ -15,8 +15,7 @@
 				<h2>Hébergeur</h2>
 				<p>
 					Hostinger International Ltd.<br />
-					Adresse : 61 Lordou Vironos Street, Larnaca, 6023, Chypre<br />
-					Site web :
+					61 Lordou Vironos Street, Larnaca, 6023, Chypre<br />
 					<a href="https://www.hostinger.fr"
 						>https://www.hostinger.fr</a
 					>
@@ -29,10 +28,10 @@
 			<a
 				href="https://www.flaticon.com/free-icons/linkedin"
 				title="linkedin icons"
-				>Linkedin icons created by Google</a
+				>Linkedin icon created by Google</a
 			>
 			<a href="https://www.flaticon.com/free-icons/cat" title="cat icons"
-				>Cat icons created by Dave Gandy</a
+				>Cat icon created by Dave Gandy</a
 			>
 		</div>
 	</footer>
