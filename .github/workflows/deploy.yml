@@ -32,3 +32,4 @@ jobs:
                   password: ${{ secrets.FTP_PASSWORD }}
                   local-dir: ./dist/ # Le dossier de sortie du build de Nuxt
                   server-dir: /public_html/ # Chemin cible sur le serveur
+                  log-level: verbose
