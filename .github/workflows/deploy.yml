@@ -31,5 +31,5 @@ jobs:
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
                   local-dir: ./dist/ # Le dossier de sortie du build de Nuxt
-                  server-dir: /public_html/ # Chemin cible sur le serveur
+                  server-dir: domains/quentinbogaert.com/public_html/ # Chemin cible sur le serveur
                   log-level: verbose
