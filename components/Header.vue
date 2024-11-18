@@ -14,6 +14,13 @@
 				</li>
 				<li>
 					<a
+						href="#projects"
+						@click.prevent="scrollToSection('projects')"
+						>Réalisations</a
+					>
+				</li>
+				<li>
+					<a
 						href="#contact"
 						@click.prevent="scrollToSection('contact')"
 						>Contact</a
