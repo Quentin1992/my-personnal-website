@@ -81,17 +81,25 @@
 		<section id="projects" class="projects">
 			<h2>Mes réalisations</h2>
 			<div class="project">
-				<h3>Chaud Mirette Productions</h3>
-				<p>
-					Site vitrine conçu pour une société de production
-					audiovisuelle, intégrant un backoffice complet pour la
-					gestion autonome des contenus.
-				</p>
-				<p>Technologies : PHP, JQuery, HTML 5, CSS 3</p>
-				<p>Fonctionnalités : responsive, accessible, avec backoffice</p>
-				<a href="https://github.com/Quentin1992/cmprod" target="_blank"
-					>Voir le projet sur GitHub</a
-				>
+				<img src="../static/images/projects/chaudmiretteprod.png" />
+				<div>
+					<h3>Chaud Mirette Productions</h3>
+					<p>
+						Site vitrine conçu pour une société de production
+						audiovisuelle, intégrant un backoffice complet pour la
+						gestion autonome des contenus.
+					</p>
+					<p>Technologies : PHP, JQuery, HTML 5, CSS 3</p>
+					<p>
+						Fonctionnalités : responsive, accessible, avec
+						backoffice
+					</p>
+					<a
+						href="https://github.com/Quentin1992/cmprod"
+						target="_blank"
+						>Voir le projet sur GitHub</a
+					>
+				</div>
 			</div>
 		</section>
 
@@ -176,6 +184,18 @@ export default {
 	&__links {
 		display: flex;
 		gap: 1em;
+	}
+}
+.projects {
+	.project {
+		@media (min-width: 900px) {
+			display: flex;
+			gap: 3em;
+		}
+		img {
+			max-height: 180px;
+			max-width: 100%;
+		}
 	}
 }
 .contact {
