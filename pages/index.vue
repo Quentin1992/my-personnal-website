@@ -101,6 +101,28 @@
 					>
 				</div>
 			</div>
+			<div class="project">
+				<img src="../static/images/projects/to-do-list.png" />
+				<div>
+					<h3>To-do list (en cours)</h3>
+					<p>
+						Projet de to-do list développée dans le cadre de mon
+						apprentissage de TypeScript. Il met en pratique des
+						concepts fondamentaux tout en explorant les bonnes
+						pratiques du développement.
+					</p>
+					<p>Technologies : Typescript, Vite, HTML 5, CSS 3</p>
+					<p>
+						Fonctionnalités : ajout, modification de l'état et
+						suppression des tâches.
+					</p>
+					<a
+						href="https://github.com/Quentin1992/todo-list-ts"
+						target="_blank"
+						>Voir le projet sur GitHub</a
+					>
+				</div>
+			</div>
 		</section>
 
 		<!-- Section Contact -->
@@ -188,6 +210,7 @@ export default {
 }
 .projects {
 	.project {
+		margin-bottom: 3rem;
 		@media (min-width: 900px) {
 			display: flex;
 			gap: 3em;
@@ -195,6 +218,7 @@ export default {
 		img {
 			max-height: 180px;
 			max-width: 100%;
+			border: solid 2px var(--darkColor);
 		}
 	}
 }
